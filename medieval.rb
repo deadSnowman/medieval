@@ -80,35 +80,3 @@ displayString = displayString + data["dict"]["appended_words"][Random.rand(data[
 
 # DISPLAY
 puts displayString
-
-
-
-
-
-
-
-
-=begin
-Enter text: 
-test
-
-./medieval.rb:28:in `+': can't convert nil into String (TypeError)
-  from ./medieval.rb:28:in `<main>'
-
-
--------------------
-
-Enter text: 
-it is god good sir
-
-./medieval.rb:28:in `+': can't convert nil into String (TypeError)
-  from ./medieval.rb:28:in `<main>'
-  seth@debian:~/Programming/Ruby/medieval$ ./medieval.rb 
-  Enter text: 
-  it is good god sir
-
-  Heigh-ho, 'tis good Loki sir Guvnor!
-
-
-
-=end
