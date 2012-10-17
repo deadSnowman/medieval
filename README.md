@@ -1,8 +1,5 @@
-This is really choopy so far
-
-
-Fix/Implement:
-- get rid of "entries" in the JSON file
-- replace &god, &bodypart, etc with equivalent
-- use arrays instead of hashes where needed
-- implement chance values
+# Fix/Implement:
+- Get rid of "entries" in the JSON file
+- Replace &god, &bodypart, etc with equivalent
+- Implement chance values
+- Make medieval.rb work with json file
