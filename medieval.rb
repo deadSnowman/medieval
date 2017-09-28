@@ -1,88 +1,109 @@
+# This program mimics the functionality of the tf2 chat parser
+# used in DeGroot Keep.  The input turns into something similar to
+# "Ye Old English" by following rules set in a provided json file
+# This could potentially be used for pirate speak or something
+# in the future.
+#
+# Author::  Seth A. Thomas
+
 #!/usr/bin/env ruby
 require 'json'
 
+
+# The Medieval chat parser class
+# Takes a json document and uses it for the translation
+class Medieval
+  #constr
+  def initialize(data)
+    @data = data
+  end
+
+  # Returns json parsed file
+  def printData()
+    puts @data
+  end
+
+  # Translates to tf2's Ye Old English like language
+  # Params:
+  # +input+:: text input to be translated
+  def translate(input)
+    outStr = input.downcase
+
+    # prepended
+    outStr = prep(outStr)
+    
+    # replace words
+    # still need to add punctuation and more of the words in general
+    outStr = singleWords(outStr)
+
+    # insults (replace)
+    outStr = insults(outStr) #get this working too
+
+    # appended
+    outStr = appnd(outStr)
+
+    puts outStr
+  end
+
+  def insults (inp)
+    outStr = ""
+    # haven't done this part yet
+    return inp.gsub("\n", " ")
+  end
+
+  def singleWords(inp)
+    transl = inp
+
+    @data["single_replacements"].each do |key, array|
+      if array.length == 1
+        transl = transl.gsub(key, array[0])
+      else
+        transl = transl.gsub(key, array[Random.rand(array.length)])
+      end
+    end
+
+    return transl
+  end
+
+  def appnd(inp)
+    randAppnd = ""
+    appnd = @data["appended_words"]
+    randAppnd << appnd[Random.rand(appnd.length)]
+    return inp.gsub("\n", " ") + randAppnd
+  end
+
+  def prep(inp)
+    randPrep = ""
+    prep = @data["prepended_words"]
+    randPrep << prep[Random.rand(prep.length)]
+    return randPrep + inp
+  end
+
+end
+
+
+# Initialize stuff
 json = ""
 file = "./dict.json"
-displayString = ""
-flag = false
 
+# Read file and parse
 if File.exists?(file)
   File.open(file, "r") do |f|
     json = f.read
   end
 end
-
 data = JSON.parse(json)
-# Display all data
-#data.each do |key, value|
-#  puts "#{key}: #{value}"
-#end
 
-# GET USER INPUT
+# Instantiate
+med = Medieval.new(data)
+
+# Get user input
 puts "Enter text: "
 input = gets
-input = input.split(' ')
-
-#ignore case
-input.each_with_index do |n, m|
-  input.to_a[m] = n.downcase
-end
-
 puts ""
 
-entries = data["dict"]["prepended_words"]["entries"].to_i
-
-
-# PREPENDED WORDS
-displayString << data["dict"]["prepended_words"][Random.rand(entries).to_s]
+# Translate
+med.translate(input)
 
 
 
-
-# WORD REPLACEMENTS
-input.each_with_index do |val, i|
-  # if there is a replacement, continue
-  if data["dict"]["word_replacements"][val.to_s]
-
-    # if the word is a possible contraction, check
-    if data["dict"]["word_replacements"][val.to_s]["type"] == "contraction"
-      # if it is, check what to replace
-      data["dict"]["word_replacements"][val.to_s].each_pair do |j, k|
-        if j != "type" # ignore type
-          if j == input.to_a[i+1]
-            # replace
-            displayString << k + " "
-            flag = true
-            break
-          end    
-        end
-      end
-      # display if 1st word isn't part of a contraction
-      if !flag
-        displayString << val.to_s + " "
-        flag = false
-      end
-
-    else 
-      # replace word
-      displayString << data["dict"]["word_replacements"][val.to_s][Random.rand(entries).to_s].chomp + " "
-    end
-
-    # display if second word isn't part of a contraction
-  else
-    if flag != true
-      displayString << val.to_s + " "
-    end
-    flag = false
-  end
-end
-
-
-
-
-
-# APPENDED WORDS
-displayString << data["dict"]["appended_words"][Random.rand(data["dict"]["appended_words"]["entries"].to_i).to_s]
-
-# DISPLAY
-puts displayString
