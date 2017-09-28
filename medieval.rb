@@ -5,6 +5,8 @@
 # in the future.
 #
 # Author::  Seth A. Thomas
+# Copyright:: Copyright (c) 2017 Seth A. Thomas
+# License::   MIT License
 
 #!/usr/bin/env ruby
 require 'json'
@@ -56,9 +58,9 @@ class Medieval
 
     @data["single_replacements"].each do |key, array|
       if array.length == 1
-        transl = transl.gsub(key, array[0])
+        transl = transl.gsub(/\b#{key}\b/, array[0])
       else
-        transl = transl.gsub(key, array[Random.rand(array.length)])
+        transl = transl.gsub(/\b#{key}\b/, array[Random.rand(array.length)])
       end
     end
 

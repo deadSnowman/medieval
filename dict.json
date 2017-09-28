@@ -1,6 +1,5 @@
 {
-  "prepended_words":
-    [
+  "prepended_words":[
     "Forsooth ",
     "I say, ",
     "I sayeth, ",
@@ -50,39 +49,60 @@
     "Kind sire, ",
     "Sire, ",
     "There is much in what you say, and yet, "
-      ],
-    "appended_words":
-      [
-      "Anon!",
+  ],
+  "appended_words":[
+    "Anon!",
     "Hum.",
     "Good sir!",
     "Good sire!",
     "Milady!",
     "My Liege!",
     "Guvnor!"
-      ],
-    "single_replacements":
-    {
-      "it is": ["tis"],
-      "it's": ["tis"],
-      "it was": ["twas"],
-      "it would": ["'twould"],
-      "it will": ["'twill"],
-      "it were": ["'twere"],
-      "shall not": ["shan't"],
-      "will not": ["shan't"],
-      "over there": ["yonder"],
-      "in the": ["i' the"],
-      "thank you":
-        [
-        "many good thanks to you ",
+  ],
+  "single_replacements":{
+    "it is":[
+      "tis"
+    ],
+    "it's":[
+      "tis"
+    ],
+    "it was":[
+      "twas"
+    ],
+    "it would":[
+      "'twould"
+    ],
+    "it will":[
+      "'twill"
+    ],
+    "it were":[
+      "'twere"
+    ],
+    "shall not":[
+      "shan't"
+    ],
+    "will not":[
+      "shan't"
+    ],
+    "over there":[
+      "yonder"
+    ],
+    "in the":[
+      "i' the"
+    ],
+    "thank you":[
+      "many good thanks to you ",
       "thankee",
       "kindly thanks to you",
       "grammercy to you"
-        ],
-      "&god":
-        [
-        "Odin",
+    ],
+    "you":[
+      "thou",
+      "thee",
+      "ye"
+    ],
+    "&god":[
+      "Odin",
       "Bob",
       "Zeus",
       "Hera",
@@ -147,9 +167,8 @@
       "Discordia",
       "Hecate",
       "Hespera"
-        ],
-      "&bodypart":
-      [
+    ],
+    "&bodypart":[
       "Beard",
       "Third Leg",
       "Scalp",
@@ -168,9 +187,8 @@
       "Spleen",
       "Gall",
       "Liver and Lights"
-      ],
-      "&gadj":
-      [
+    ],
+    "&gadj":[
       "Almighty",
       "Unthinkable",
       "Unknowable",
@@ -208,9 +226,8 @@
       "Tempestuous",
       "Destructive",
       "Grim"
-      ],
-      "&bodyadj":
-      [
+    ],
+    "&bodyadj":[
       "Unknowable",
       "Unescapable",
       "Unfathomable",
@@ -250,6 +267,6 @@
       "Unending",
       "Soundless",
       "Incomprehensible"
-      ]
-    }
+    ]
+  }
 }
