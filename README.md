@@ -11,4 +11,4 @@ The basic structure is there, but I still need to:
 
 - get insults working
 - finish adding the replacement words
-
+- reorder things so only &god, &gadj, &bodypart, and &bodyadj are being modified after the prepend/append
