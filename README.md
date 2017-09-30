@@ -9,6 +9,5 @@ in the future.
 Well, decided to come back and remake this now that I know more.
 The basic structure is there, but I still need to:
 
-- get insults working
-- finish adding the replacement words
-- reorder things so only &god, &gadj, &bodypart, and &bodyadj are being modified after the prepend/append
+- fix multiple occurances of words all translating to the same word
+- finish adding single replacement words
