@@ -204,12 +204,6 @@
       "colors",
       "heraldry"
     ],
-    "walking":[
-      "a-walkin'"
-    ],
-    "bet":[
-      "warrant"
-    ],
     "the":[
       "ye"
     ],
@@ -398,8 +392,104 @@
     "groups":[
       "&parties_swap"
     ],
+    "lfg":[
+      "&lfg_prep a fellowship",
+      "&lfg_prep a band of trusty fellows",
+      "&lfg_prep a trustworthy group",
+      "&lfg_prep fine adventurers",
+      "&lfg_prep a worthy band"
+    ],
+    "newbie":[
+      "&newbie_swap"
+    ],
+    "newb":[
+      "&newbie_swap"
+    ],
+    "noob":[
+      "&newbie_swap"
+    ],
+    "nub":[
+      "&newbie_swap"
+    ],
+    "lowbie":[
+      "&newbie_swap"
+    ],
+    "beginner":[
+      "&newbie_swap"
+    ],
+    "newbies":[
+      "&newbies_swap"
+    ],
+    "newbs":[
+      "&newbies_swap"
+    ],
+    "noobs":[
+      "&newbies_swap"
+    ],
+    "nubs":[
+      "&newbies_swap"
+    ],
+    "lowbies":[
+      "&newbies_swap"
+    ],
+    "beginners":[
+      "&newbies_swap"
+    ],
+    "level":[
+      "rank",
+      "station"
+    ],
+    "levels":[
+      "rank",
+      "station"
+    ],
+    "rofl":[
+      "&rofl_swap"
+    ],
+    "roflmao":[
+      "&rofl_swap"
+    ],
+    "roflol":[
+      "&rofl_swap"
+    ],
+    "wait":[
+      "hold",
+      "hold hard",
+      "mark time",
+      "tarry"
+    ],
+    "waits":[
+      "holds",
+      "holds hard",
+      "marks time",
+      "tarries"
+    ],
+    "need":[
+      "covet",
+      "wish",
+      "desire",
+      "reuest"
+    ],
+    "needs":[
+      "covets",
+      "wishes",
+      "desires",
+      "requires"
+    ],
+    "even":[
+      "e'en"
+    ],
     "never":[
       "ne'er"
+    ],
+    "over":[
+      "o'er"
+    ],
+    "before":[
+      "'ere"
+    ],
+    "unless":[
+      "lest"
     ],
     "hehe":[
       "&haha_swap"
@@ -412,6 +502,57 @@
     ],
     "haha":[
       "&haha_swap"
+    ],
+    "shop":[
+      "&shop_swap"
+    ],
+    "store":[
+      "&shop_swap"
+    ],
+    "shops":[
+      "&shop_swap"
+    ],
+    "stores":[
+      "&shop_swap"
+    ],
+    "vendor":[
+      "&vendor_swap"
+    ],
+    "seller":[
+      "&vendor_swap"
+    ],
+    "vendors":[
+      "&vendors_swap"
+    ],
+    "salesmen":[
+      "&vendors_swap"
+    ],
+    "friend":[
+      "&friend_swap"
+    ],
+    "buddy":[
+      "&friend_swap"
+    ],
+    "pal":[
+      "&friend_swap"
+    ],
+    "mate":[
+      "&friend_swap"
+    ],
+    "friends":[
+      "&friends_swap"
+    ],
+    "buddies":[
+      "&friends_swap"
+    ],
+    "pals":[
+      "&friends_swap"
+    ],
+    "mates":[
+      "&friends_swap"
+    ],
+    "teh":[
+      "the"
     ],
     "assist":[
       "aid",
@@ -439,6 +580,12 @@
     "woman":[
       "&girl_swap"
     ],
+    "girls":[
+      "&girls_swap"
+    ],
+    "women":[
+      "&girl_swap"
+    ],
     "later":[
       "anon"
     ],
@@ -457,6 +604,13 @@
     ],
     "enough":[
       "enow"
+    ],
+    "wow":[
+      "Marry",
+      "Faith",
+      "S'wounds",
+      "God's wounds",
+      "Zounds"
     ],
     "child":[
       "poppet"
@@ -478,9 +632,151 @@
     ],
     "shit":[
       "nightsoil"
+    ],
+    "making":[
+      "a-makin'"
+    ],
+    "though":[
+      "tho'"
+    ],
+    "until":[
+      "'till"
+    ],
+    "underneath":[
+      "'neath"
+    ],
+    "beneath":[
+      "'neath"
+    ],
+    "coming":[
+      "a-comin'"
+    ],
+    "walking":[
+      "a-walkin'"
+    ],
+    "hunting":[
+      "a-huntin'"
+    ],
+    "bet":[
+      "warrant"
+    ]
+  },
+  "punctuation":{
+    "!":[
+      ", verily!",
+      ", verily I say!",
+      ", verily I sayeth!",
+      ", I say!",
+      ", I sayeth!",
+      "! Huzzah!",
+      "! Hear Hear!",
+      "! What-ho!",
+      "! Ho!",
+      "! Fire!",
+      ", indeed!"
+    ],
+    "?":[
+      ", I say!",
+      ", I wonder?",
+      ", wonder I?",
+      ", what say thee?",
+      ", what sayeth thee?",
+      ", what say thou?",
+      ", what sayeth thou?",
+      ", I ponder?",
+      ", I pondereth?",
+      ", pray tell?",
+      ", pray tell?",
+      ", ho?",
+      ", do tell?"
     ]
   },
   "change_tags":{
+    "&friend_swap":[
+      "companion",
+      "boon companion",
+      "chum",
+      "lad",
+      "cohort",
+      "confidant",
+      "right-hand man",
+      "mate",
+      "compadre",
+      "fellow"
+    ],
+    "&friends_swap":[
+      "companions",
+      "boon companions",
+      "chums",
+      "lads",
+      "cohorts",
+      "confidants",
+      "right-hand men",
+      "mates",
+      "compadres",
+      "fellows"
+    ],
+    "&vendor_swap":[
+      "shopkeep",
+      "monger",
+      "merchant",
+      "purveyor"
+    ],
+    "&vendors_swap":[
+      "shopkeepers",
+      "mongerers",
+      "merchants",
+      "purveyors"
+    ],
+    "&shop_swap":[
+      "shoppe",
+      "shopcart",
+      "olde shoppe",
+      "market",
+      "marketplace",
+      "ye olde thrifte shoppe"
+    ],
+    "&rofl_swap":[
+      "rofleth",
+      "guffaw"
+    ],
+    "&newbie_swap":[
+      "neophyte",
+      "youngster",
+      "serf",
+      "dabbler",
+      "pleb",
+      "apprentice",
+      "journeyman",
+      "pupil",
+      "tenderfoot",
+      "initiate",
+      "fledgling",
+      "greenhorn",
+      "acolyte"
+    ],
+    "&newbies_swap":[
+      "neophytes",
+      "youngsters",
+      "serfs",
+      "dabblers",
+      "plebians",
+      "apprentices",
+      "journeymen",
+      "pupils",
+      "tenderfeet",
+      "initiates",
+      "fledglings",
+      "greenhorns",
+      "acolytes"
+    ],
+    "&lfg_prep":[
+      "I am seeking",
+      "I be looking for",
+      "I am desiring",
+      "I be seaching for",
+      "I'm in search of"
+    ],
     "&party_swap":[
       "band",
       "fellowship",
@@ -890,6 +1186,16 @@
       "goodwife",
       "maid",
       "maiden"
+    ],
+    "&girls_swap":[
+      "madames",
+      "waifs",
+      "mistresses",
+      "lasses",
+      "ladies",
+      "goodwives",
+      "maids",
+      "maidens"
     ],
     "&haha_swap":[
       "guffaw!",

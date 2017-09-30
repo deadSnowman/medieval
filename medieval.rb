@@ -39,6 +39,9 @@ class Medieval
     # prepend and append
     outStr = prepend_and_append(outStr)
 
+    # punctuation
+    #outStr = punctuation(outStr)
+
     # change tags like &god or &bodypart, etc
     outStr = change_tags(outStr)
 
@@ -64,6 +67,16 @@ class Medieval
     randAppnd << appnd[Random.rand(appnd.length)]
     randPrep << prep[Random.rand(prep.length)]
     return randPrep.gsub("\n", " ") + inp.gsub("\n", " ") + randAppnd
+  end
+
+  def punctuation(inp)
+    transl = inp
+
+    #@data["punctuation"].each do |key, array|
+    #  transl = transl.gsub(/\b#{key}/, array[Random.rand(array.length)])
+    #end
+
+    return transl
   end
 
   def change_tags(inp)
