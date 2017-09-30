@@ -29,56 +29,50 @@ class Medieval
   # Params:
   # +input+:: text input to be translated
   def translate(input)
-    outStr = input.downcase
+    #outStr = input.downcase
+    outStr = input
 
-    # prepended
-    outStr = prep(outStr)
-    
     # replace words
-    # still need to add punctuation and more of the words in general
-    outStr = singleWords(outStr)
+    # still need to add punctuation and missing words
+    outStr = single_words(outStr)
 
-    # insults (replace)
-    outStr = insults(outStr) #get this working too
+    # prepend and append
+    outStr = prepend_and_append(outStr)
 
-    # appended
-    outStr = appnd(outStr)
+    # change tags like &god or &bodypart, etc
+    outStr = change_tags(outStr)
+
 
     puts outStr
   end
 
-  def insults (inp)
-    outStr = ""
-    # haven't done this part yet
-    return inp.gsub("\n", " ")
-  end
-
-  def singleWords(inp)
+  def single_words(inp)
     transl = inp
 
     @data["single_replacements"].each do |key, array|
-      if array.length == 1
-        transl = transl.gsub(/\b#{key}\b/, array[0])
-      else
-        transl = transl.gsub(/\b#{key}\b/, array[Random.rand(array.length)])
-      end
+      transl = transl.gsub(/\b#{key}\b/i, array[Random.rand(array.length)])
     end
 
     return transl
   end
 
-  def appnd(inp)
+  def prepend_and_append(inp)
     randAppnd = ""
+    randPrep = ""
     appnd = @data["appended_words"]
+    prep = @data["prepended_words"]
     randAppnd << appnd[Random.rand(appnd.length)]
-    return inp.gsub("\n", " ") + randAppnd
+    randPrep << prep[Random.rand(prep.length)]
+    return randPrep.gsub("\n", " ") + inp.gsub("\n", " ") + randAppnd
   end
 
-  def prep(inp)
-    randPrep = ""
-    prep = @data["prepended_words"]
-    randPrep << prep[Random.rand(prep.length)]
-    return randPrep + inp
+  def change_tags(inp)
+    transl = inp
+    @data["change_tags"].each do |key, array|
+      transl = transl.gsub(key, array[Random.rand(array.length)])
+    end
+
+    return transl
   end
 
 end
